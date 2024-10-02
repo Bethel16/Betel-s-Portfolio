@@ -1,0 +1,879 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Betel Tesfu, portfolio, Betel, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Betel's Portfolio. Full-Stack Web Developer" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Include easyPieChart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easy-pie-chart/2.1.7/easypiechart.min.js"></script>
+    
+    {% comment %} Purejs count {% endcomment %}
+    <!-- Add this in your <head> section or just before your closing </body> tag -->
+<script src="https://cdn.jsdelivr.net/npm/purecounterjs@2.4.0/dist/purecounter_vanilla.js"></script>
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Additional Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+    <title>Portfolio | Betel Tesfu</title>
+
+
+    <style>
+     
+    </style>
+</head>
+
+<body oncontextmenu="return false" >
+<div class="grid-container"> 
+  <!-- pre loader -->
+  <div class="loader-container">
+    <img draggable="false" src= "{% static 'assets/images/preloader.gif' %} " alt="">
+  </div> 
+  
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <a href="/" class="logo">
+        <img src="{% static 'assets/images/lo.png' %}" alt="Logo" class="pci-logo"> <!-- Add PCI logo here -->
+        <span class="logo-text"></span>
+    </a>
+    <div class="header-toggle d-xl-none bi bi-list" id="hamburger"></div>
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="#home"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+            <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+            <li><a href="#background"> <i class="fas fa-graduation-cap"></i><span>Background</span></a></li>
+            <li><a href="#services-skills"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+            <li><a href="#portfolio"><i class="fas fa-laptop-code navicon"></i><span>Portfolio</span></a></li>
+            <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+  
+  <main class="main-content">
+  <!-- hero section starts -->
+  <section class="home" id="home">
+      <div id="particles-js"></div>
+  
+      <div class="content">
+      <h2>Hi There,<br/> I'm Betel <span>Tesfu</span></h2>
+      <p>i am into <span class="typing-text"></span></p>
+      <a href="#about" class="btn"><span>About Me</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+      <div class="socials">
+          <ul class="social-icons">
+            <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/betel-tesfu-25a70a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+            <li><a class="github" aria-label="GitHub" href="https://github.com/Bethel16?tab=overview&from=2024-05-01&to=2024-05-31" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a class="twitter" aria-label="Twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="telegram" aria-label="Telegram" href="https://t.me/Tadael16y" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+            <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/bet_el16/"><i class="fab fa-instagram" target="_blank"></i></a></li>
+            <li><a class="dev" aria-label="Dev" href="#" target="_blank"><i class="fab fa-dev"></i></a></li>
+          </ul>
+        </div>
+      </div>
+  <div class="image">
+      <img draggable="false" class="tilt" src= "{% static 'assets/images/heross.jpg'%}" alt="">
+  </div>
+  </section>
+  <!-- hero section ends -->
+  
+  
+  <!-- about section starts -->
+  <section class="about" id="about">
+      <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+      
+      <div class="row">
+  
+      <div class="image">
+          <img draggable="false" class="tilt" src= "{% static 'assets/images/profile3.jpg'%} " alt="">
+      </div>
+      <div class="content">
+          <h3>I'm Betel</h3>
+          <span class="tag">Full Stack Developer</span>
+          
+          <p>I am a Full-Stack developer with a degree in Computer Science from America College of Technology, specializing in building efficient web applications using the Django framework.
+             Passionate about both frontend and backend development, I focus on creating innovative solutions that provide a seamless user experience.
+             I'm continuously improving my skills and exploring new technologies, always eager to take on challenging projects that push the boundaries of web development.</p>
+          
+          <div class="box-container">
+              <div class="box">
+                <p><span> email : </span> {{my_profile.email}}</p>
+                <p><span> place : </span>  {{my_profile.address}}</p>
+              </div>
+          </div>
+          
+          <div class="resumebtn">
+              <a href="https://drive.google.com/file/d/1WXjqRJiWA7mYBs-faMPY1O4toFTegOEU/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
+                  <i class="fas fa-chevron-right"></i>
+              </a>
+          </div>
+  
+      </div>
+      </div>
+  </section>
+  <!-- about section ends -->
+
+
+
+ <!-- Stats Section start -->
+
+ <section id="stats" class="stats section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+
+        
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+          <div class="stats-item text-center">
+              <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-person-check"></i>
+                <span class="counter" data-count="40" style="font-size: 40px; font-weight: 400; margin-left: 10px;">0</span>
+              </div>
+              <p>Work Experience</p>
+          </div>
+      </div><!-- End Stats Item -->    
+          <div class="col-lg-3 col-md-6  col-sm-12 d-flex flex-column align-items-center">
+              <div class="stats-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                      <i class="bi bi-emoji-smile"></i>
+                      <span class="counter" data-count="{{status.happy_client}}" style="font-size: 40px; font-weight: 400; margin-left: 10px;">0</span>
+                  </div>
+                  <p>Happy Clients</p>
+              </div>
+          </div><!-- End Stats Item -->      
+
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+              <div class="stats-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <i class="bi bi-trophy"></i>
+                    <span class="counter" data-count="{{status.project_completed}}" style="font-size: 40px; font-weight: 400; margin-left: 10px;">0</span>
+                  </div>
+                  <p>Projects Completed</p>
+              </div>
+          </div><!-- End Stats Item -->      
+  
+
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+              <div class="stats-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <i class="bi bi-award"></i>                                       <span class="counter" data-count="{{status.certification}}" style="font-size: 40px; font-weight: 400; margin-left: 10px;">0</span>
+                  </div>
+                  <p>Certification</p>
+              </div>
+          </div><!-- End Stats Item -->      
+      </div>
+  </div>
+</section>
+
+ <!-- Stats Section end-->
+
+
+<div class="sections-wrapper" id="background"> 
+  <!-- Education Section -->
+  <section class="education timeline" id="education" >
+    <h1 class="heading">
+      <i class="fas fa-graduation-cap"></i>
+      <span>Background</span>
+    </h1>
+
+    <p class="quote">Education is not the learning of facts, but the training of the mind to think.</p>
+
+    <div class="container">
+      {% for i in institutions %}
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>{{ i.institution }}</h3>
+          <div class="timeline-date">{{ i.start_date|date:"Y" }} - {{ i.end_date|date:"Y" }}</div>
+          <p><i class="fas fa-book"></i> {{ i.field_of_study }} | <i class="fas fa-map-marker-alt"></i>  <span> {{ i.location }} <span></p>
+          <h4><i class="fas fa-calendar-alt"></i> {{ i.start_date|date:"Y" }} - {{ i.end_date|date:"Y" }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+
+  <!-- experience section starts -->
+  <section class="work-experience timeline" id="experience">
+    <h1 class="heading">
+      <i class="fas fa-briefcase"></i>
+      <span>Work Experience</span>
+    </h1>
+  
+    <p class="qoute">Experience is the teacher of all things.</p>
+  
+    <div class="container">
+      {% for i in experiences %}
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>{{ i.job_title }}</h3>
+          <p>{{ i.company_name }} | <i class="fas fa-map-marker-alt"></i>  <span> {{ i.location }} <span></p>
+          <p> {{i.description}}</p>
+          <h4><i class="fas fa-calendar-alt"></i> {{ i.start_date|date:"Y" }} - {{ i.end_date|date:"Y" }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section> 
+  <!-- experience section ends -->
+</div>
+
+ 
+<!-- work project section starts -->
+<section class="special-card-section" id="portfolio">
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Portfolio <span></span></h2>
+
+  <!-- Categories Navigation -->
+  <div class="category-nav">
+    <ul>
+      <li><a href="#" class="category-link active" data-category="all">All</a></li>
+      {% for category in categories %}
+        <li><a href="#" class="category-link" data-category="{{ category.id }}">{{ category.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Projects Container -->
+  <div class="container">
+    <div id="project-container" class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+      {% for project in projects %}
+        <div class="col-sm-4 project-card" data-category="{{ project.category.id }}">
+          <div class="card-list">
+            <article class="card">
+              <figure class="card-image">
+                {% if project.images.first %}
+                  <img src="{{ project.images.first.image.url }}" alt="{{ project.title }}" />
+                {% else %}
+                  <img src="{% static 'path/to/default_image.jpg' %}" alt="Default Image" />
+                {% endif %}
+              </figure>
+              <div class="card-header">
+                <a href="#">{{ project.title }}</a>
+              </div>
+              <div class="card-footer">
+                <div class="card-meta card-meta--views">
+                  <a href="#" class="open-modal" 
+                     data-id="{{ project.id }}" 
+                     data-title="{{ project.title }}" 
+                     data-description="{{ project.description }}"
+                     data-images="{% for image in project.images.all %}{{ image.image.url }}{% if not forloop.last %},{% endif %}{% endfor %}" 
+                     onclick="openProjectModal(this)">Details</a>
+                </div>
+                <div class="card-meta card-meta--date">
+                  {{ project.completion_date }}
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<!-- work project section ends -->
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal" style="display:none;">
+  <div class="modal-content" style="max-width: 800px; max-height: 600px; overflow-y: auto;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <!-- Slideshow for images -->
+    <div class="slideshow-container">
+      <!-- Slides will be inserted here dynamically -->
+    </div>
+    
+    <h2 id="modal-title">Modal Title</h2>
+    <p id="modal-description" style="max-height: 200px; overflow-y: auto;">This is the modal content.</p> <!-- Set max-height for the description -->
+
+    {% comment %} <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a> {% endcomment %}
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </div>
+</div>
+
+
+<!-- Services Section Starts -->
+<section class="services-skills" id="services-skills">
+  <h2 class="heading"><i class="bi bi-briefcase-fill"></i> Services</h2>
+
+  <p class="description">Explore the skills we offer in the fields of Front-end, Back-end, and Full-stack development.</p>
+
+  <div class="container">
+    {% for general_skill in general_skills %}
+      <div class="card {{ general_skill.skill_name|lower|slugify }}">
+        <div class="card-content">
+          <!-- Dynamic Icon -->
+          <div class="card-icon">
+            <i class="{{ general_skill.icon_class }}"></i> <!-- Icon from the model -->
+          </div>
+
+          <!-- Dynamic Skill Name -->
+          <h3>{{ general_skill.skill_name }}</h3>
+
+          <!-- Dynamic Description -->
+          <p>{{ general_skill.description }}</p>
+
+          <!-- Dynamic Skills List -->
+          <ul class="skills-list">
+            {% for specific_skill in general_skill.specific_skills.all %}
+              <li>{{ specific_skill.skill_name }}
+                <div class="progress-bar-container">
+                  <div class="progress-bar" data-target="{{ specific_skill.proficiency }}">
+                    <span class="progress-value">0%</span>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+<!-- Services Section Ends -->
+  <!-- contact section starts -->
+  <section class="contact" id="contact">
+    
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+  
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img draggable="false" src="{% static 'assets/images/contact1.png'%}" alt="">
+        </div>
+      <form id="contact-form">
+        {% csrf_token %}
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="name" placeholder="Name" id="name" required>
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="email" name="email" placeholder="Email"id="email" required>
+            <i class='fas fa-envelope'></i>
+          </div>
+          <div class="field">
+            <input type="Number" name="phone" placeholder="Phone" id="phone">
+            <i class='fas fa-phone-alt'></i>
+          </div>
+          <div class="message">
+          <textarea placeholder="Message" name="message" id="message" required></textarea>
+          <i class="fas fa-comment-dots"></i>
+          </div>
+          </div>
+        <div class="button-area">
+          <button type="submit">
+            Submit <i class="fa fa-paper-plane"></i></button>
+        </div>
+        <div id="error-message" style="color: red; display: none;"></div>
+        <div id="success-message" style="color: green; display: none;"></div>
+        </form>
+    </div>
+    </div>
+  </section>
+  <!-- contact section ends -->
+  
+  <!-- footer section starts -->
+  <section class="footer">
+    <div class="box-container">
+  
+        <div class="box">
+            <h3>Betel's Portfolio</h3>
+            <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+        </div>
+  
+        <div class="box">
+            <h3>quick links</h3>
+
+
+            <a href="#home"><i class="bi bi-house navicon"></i><span>Home</span></a>
+            <a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a>
+            <a href="#background"> <i class="fas fa-graduation-cap"></i><span>Background</span></a>
+            <a href="#services-skills"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a>
+            <a href="#portfolio"><i class="fas fa-laptop-code navicon"></i><span>Portfolio</span></a>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
+        
+        </div>
+  
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-phone"></i>+251-967-827-618</p>
+            <p> <i class="fas fa-envelope"></i>beteltesfu15@@gmail.com</p>
+            <p> <i class="fas fa-map-marked-alt"></i>Addis Ababa, Ethiopia</p>
+            <div class="share">
+  
+                <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/betel-tesfu-25a70a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a class="github" aria-label="GitHub" href="https://github.com/Bethel16?tab=overview&from=2024-05-01&to=2024-05-31" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:beteltesfu15@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+                <a class="telegram" aria-label="Telegram" href="https://t.me/Tadael16y" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+             
+            </div>
+        </div>
+    </div>
+  
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> Betel Tesfu</a></h1>
+  
+  </section>
+  <!-- footer section ends -->
+  
+  </main>
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
+  
+  
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- particle.js links -->
+  <script src= "{% static 'assets/js/particles.min.js'%} "></script>
+  <script src= "{% static 'assets/js/app.js' %}"></script>
+  
+  <!-- vanilla tilt.js links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
+  <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+      ></script>
+  
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+  
+  <script src="{% static 'assets/js/script.js'%} "></script>
+  <script>
+    $(document).ready(function () {
+      $('.chart').easyPieChart({
+        scaleColor: false,
+        lineWidth: 8,
+        lineCap: 'round',
+        barColor: '#2980b9', // You can set the bar color here or apply per chart
+        trackColor: '#f5f5f5',
+        size: 160,
+        animate: 2000
+      });
+    });
+    var typed = new Typed(".typing-text", {
+      strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+      loop: true,
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 500,
+  });
+
+// Get the tab elements
+
+// Get the content sections
+var skillsSection = document.getElementById('skillsSection');
+var certificationSection = document.getElementById('certificationSection');
+
+function animateProgressBars() {
+  const progressBars = document.querySelectorAll('.progress-bar');
+
+  progressBars.forEach(bar => {
+      const target = parseInt(bar.getAttribute('data-target'), 10); // Get target percentage from data attribute
+      let count = 0;
+
+      // Set the initial width to 0%
+      bar.style.width = '0%';
+      bar.querySelector('.progress-value').textContent = '0%'; // Initialize the displayed value
+
+      // Set initial color based on the initial count
+      setColor(bar, count);
+
+      // Interval to increment the width
+      const interval = setInterval(() => {
+          if (count >= target) {
+              clearInterval(interval); // Stop the interval when the target is reached
+          } else {
+              count++; // Increment count
+              bar.style.width = count + '%'; // Update the width of the progress bar
+              bar.querySelector('.progress-value').textContent = count + '%'; // Update displayed percentage
+              bar.setAttribute('aria-valuenow', count); // Update the aria attribute for accessibility
+              
+              // Set the color based on the current count
+              setColor(bar, count);
+          }
+      }, 20); // Adjust the speed of the counting (20ms)
+  });
+}
+
+// Function to set color based on the percentage
+function setColor(bar, percent) {
+  if (percent >= 90) {
+      bar.style.background = 'linear-gradient(to right, #4caf50, #81c784)'; // Green gradient
+  } else if (percent >= 80) {
+      bar.style.background = 'linear-gradient(to right, #2196F3, #64b5f6)'; // Blue gradient
+  } else if (percent >= 70) {
+      bar.style.background = 'linear-gradient(to right, #ff9800, #ffb74d)'; // Orange gradient
+  } else {
+      bar.style.background = 'linear-gradient(to right, #f44336, #e57373)'; // Red gradient
+  }
+}
+
+// Call the function to start animating the progress bars
+document.addEventListener("DOMContentLoaded", animateProgressBars);
+
+
+
+  // Get modal element
+  const modal = document.getElementById("myModal");
+  // Get close button
+  const closeButton = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on a project detail link
+  document.querySelectorAll('.open-modal').forEach(item => {
+    item.addEventListener('click', function(event) {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+  
+      // Get data attributes
+      const title = this.getAttribute('data-title');
+      const description = this.getAttribute('data-description');
+  
+      // Set modal content
+      document.getElementById("modal-title").innerText = title;
+      document.getElementById("modal-description").innerText = description;
+  
+      // Display modal
+      modal.style.display = "block";
+    });
+  });
+  
+  // When the user clicks on <span> (x), close the modal
+  closeButton.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  {% comment %}  Slider{% endcomment %}
+  let slideIndex = 0;
+let autoSlideInterval;
+
+// Function to open the modal and initialize the slideshow
+function openProjectModal(element) {
+    const title = element.getAttribute('data-title');
+    const description = element.getAttribute('data-description');
+    const images = element.getAttribute('data-images').split(','); // Get the images as an array
+
+    // Set the modal title and description
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-description').innerText = description;
+
+    // Update the slideshow with the images
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    slideshowContainer.innerHTML = ''; // Clear existing slides
+    images.forEach((image, index) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.className = 'mySlides'; // Each slide
+
+        const imgElement = document.createElement('img');
+        imgElement.src = image; // Set the image source
+        imgElement.style.width = '100%'; // Ensure images are responsive
+
+        slideDiv.appendChild(imgElement);
+        slideshowContainer.appendChild(slideDiv);
+    });
+
+    // Reset slide index and start the slideshow
+    slideIndex = 0;
+    showSlides(slideIndex);
+
+    // Start the auto-sliding
+    autoSlideInterval = setInterval(() => {
+        plusSlides(1); // Move to the next slide every few seconds
+    }, 2000); // Change slide every 3 seconds (adjust this value if needed)
+
+    // Display the modal
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+}
+
+// Function to handle next/previous navigation
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Function to handle slide navigation by specific index
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Core function to display the correct slide
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+
+    // Handle slide index looping
+    if (n >= slides.length) {
+        slideIndex = 0; // Go back to the first slide
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1; // Go to the last slide
+    }
+
+    // Hide all slides initially
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    // Show the current slide
+    slides[slideIndex].style.display = "block";  
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+
+    // Stop the auto-sliding when the modal is closed
+    clearInterval(autoSlideInterval);
+}
+
+// Optional: Close modal when clicking outside of the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+  {% comment %}  {% endcomment %}
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select all the year elements
+      const yearElements = document.querySelectorAll('.year');
+  
+      yearElements.forEach(function(element) {
+        const startYear = parseInt(element.getAttribute('data-start'));
+        const endYear = parseInt(element.getAttribute('data-end')) || new Date().getFullYear();
+        
+        const yearDifference = endYear - startYear;
+  
+        // Display the year difference
+        element.innerHTML = `${yearDifference} years`;
+      });
+    });
+
+
+    $(document).ready(function() {
+      $('#contact-form').on('submit', function(e) {
+          e.preventDefault(); // Prevent the default form submission
+  
+          // Collecting input values
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var phone = $('#phone').val();
+          var message = $('#message').val();
+  
+          // Simple validation for required fields
+          if (name === '' || email === '' || message === '') {
+              alert('Please fill out all required fields.');
+              return false; // Prevent form submission
+          }
+  
+          // Proceed with AJAX if validation passes
+          $.ajax({
+              type: 'POST',
+              url: "{% url 'send_to_email' %}", // Ensure this URL is correctly configured in your Django urls.py
+              data: {
+                  name: name,
+                  email: email,
+                  phone: phone,
+                  message: message,
+                  csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+              },
+              success: function(response) {
+                  if (response.message) {
+                      $('#success-message').text('Message sent successfully!').show();
+                      $('#contact-form')[0].reset(); // Reset form fields after successful submission
+                  } else {
+                      $('#error-message').text(response.message || 'An error occurred.').show();
+                  }
+              },
+              error: function(xhr) {
+                  $('#error-message').text(xhr.responseJSON.error || 'An error occurred. Please try again later.').show();
+              }
+          });
+      });
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const navmenu = document.getElementById('navmenu');
+  
+  hamburger.addEventListener('click', () => {
+      // Toggle display of nav menu
+      if (navmenu.style.display === 'block') {
+          navmenu.style.display = 'none'; // Hide the nav menu
+          hamburger.classList.remove('bi-x'); // Change icon back to hamburger
+          hamburger.classList.add('bi-list');
+      } else {
+          navmenu.style.display = 'block'; // Show the nav menu
+          hamburger.classList.remove('bi-list'); // Change icon to X
+          hamburger.classList.add('bi-x');
+      }
+  });
+  
+ 
+// Close the navmenu when a link is clicked, but only on small screens
+document.querySelectorAll('#navmenu a').forEach(link => {
+  link.addEventListener('click', () => {
+      // Check if the screen width is less than or equal to 992px (small screens)
+      if (window.innerWidth <= 992) {
+          navmenu.style.display = 'none'; // Hide the nav menu on link click
+          hamburger.classList.remove('bi-x'); // Change icon back to hamburger
+          hamburger.classList.add('bi-list');
+      }
+  });
+});
+
+// Optional: Add resize event to dynamically update behavior when screen size changes
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 992) {
+      navmenu.style.display = 'block'; // Show the navmenu on larger screens
+  }
+});
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        const statsSection = document.getElementById('stats');
+        const sectionPosition = statsSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (sectionPosition < screenPosition) {
+            counters.forEach(counter => {
+                const targetCount = +counter.getAttribute('data-count');
+                let currentCount = 0;
+                const increment = Math.ceil(targetCount / 100); // Adjust the increment based on the target count
+
+                const updateCounter = () => {
+                    if (currentCount < targetCount) {
+                        currentCount += increment;
+                        if (currentCount > targetCount) {
+                            currentCount = targetCount; // Ensure it doesn't exceed the target
+                        }
+                        counter.textContent = currentCount;
+                        requestAnimationFrame(updateCounter); // Call updateCounter on next animation frame
+                    }
+                };
+                updateCounter(); // Start the animation
+            });
+            // Remove the event listener after the counters have animated
+            window.removeEventListener('scroll', animateCounters);
+        }
+    }
+
+    window.addEventListener('scroll', animateCounters);
+    animateCounters();
+   
+    var faviconUrl = "{% static 'images/heross.jpg' %}";
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const categoryLinks = document.querySelectorAll('.category-link');
+      const projectCards = document.querySelectorAll('.project-card');
+    
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+    
+          // Remove active class from all category links
+          categoryLinks.forEach(link => link.classList.remove('active'));
+          this.classList.add('active');  // Add active class to the clicked link
+    
+          const selectedCategory = this.getAttribute('data-category');
+    
+          // Show or hide projects based on selected category
+          projectCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            
+            // Show the project if it matches the selected category or 'all'
+            if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+              card.style.display = 'block';
+              
+              // Add the 'visible' class with a slight delay for the animation
+              setTimeout(() => {
+                card.classList.add('visible');
+              }, 100);
+            } else {
+              // Remove the 'visible' class and hide the project
+              card.classList.remove('visible');
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 400); // Wait for the fade-out animation to complete before hiding
+            }
+          });
+        });
+      });
+    
+      // Initially make all project cards visible with animation
+      setTimeout(() => {
+        projectCards.forEach(card => {
+          card.classList.add('visible');
+        });
+      }, 100);
+    });
+    
+    
+
+  </script>
+</div>
+  </body>
+  </html>
+  
