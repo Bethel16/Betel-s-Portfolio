@@ -97,7 +97,6 @@ class Certification(models.Model):
 class Experience(models.Model):
     job_title = models.CharField(max_length=100)
     company_name = models.CharField(max_length=200)
-    description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
     location = models.CharField(max_length=200, blank=True, null=True)
