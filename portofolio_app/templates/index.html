@@ -20,39 +20,23 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
+    <link rel="icon" href="{% static 'assets/images/heross.jpg' %}" type="image/x-icon" >
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- Include easyPieChart -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easy-pie-chart/2.1.7/easypiechart.min.js"></script>
-    
-    {% comment %} Purejs count {% endcomment %}
-    <!-- Add this in your <head> section or just before your closing </body> tag -->
-<script src="https://cdn.jsdelivr.net/npm/purecounterjs@2.4.0/dist/purecounter_vanilla.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/purecounterjs@2.4.0/dist/purecounter_vanilla.js"></script>
 
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <!-- Additional Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-
     <title>Portfolio | Betel Tesfu</title>
-
-
-    <style>
-     
-    </style>
 </head>
-
 <body oncontextmenu="return false" >
 <div class="grid-container"> 
   <!-- pre loader -->
@@ -151,8 +135,6 @@
  <section id="stats" class="stats section">
   <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4">
-
-        
         <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
           <div class="stats-item text-center">
               <div class="d-flex align-items-center justify-content-center">
@@ -546,7 +528,7 @@ function animateProgressBars() {
               // Set the color based on the current count
               setColor(bar, count);
           }
-      }, 20); // Adjust the speed of the counting (20ms)
+      }, 5); // Adjust the speed of the counting (20ms)
   });
 }
 
@@ -564,7 +546,7 @@ function setColor(bar, percent) {
 }
 
 // Call the function to start animating the progress bars
-document.addEventListener("DOMContentLoaded", animateProgressBars);
+window.addEventListener('scroll', animateProgressBars);
 
 
 
@@ -808,7 +790,7 @@ window.addEventListener('resize', () => {
                         if (currentCount > targetCount) {
                             currentCount = targetCount; // Ensure it doesn't exceed the target
                         }
-                        counter.textContent = currentCount;
+                        counter.textContent = currentCount + '+ years';
                         requestAnimationFrame(updateCounter); // Call updateCounter on next animation frame
                     }
                 };
@@ -822,7 +804,8 @@ window.addEventListener('resize', () => {
     window.addEventListener('scroll', animateCounters);
     animateCounters();
    
-    var faviconUrl = "{% static 'images/heross.jpg' %}";
+    var faviconUrl = "{% static 'assets/images/heross.jpg'%}";
+
 
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -870,7 +853,15 @@ window.addEventListener('resize', () => {
       }, 100);
     });
     
-    
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === "visible") {
+          document.title = "Portfolio | Betel Tesfu";
+          $("#favicon").attr("href", faviconUrl);
+      } else {
+          document.title = "Come Back To Portfolio";
+          $("#favicon").attr("href", faviconUrl);
+      }
+  });
 
   </script>
 </div>
