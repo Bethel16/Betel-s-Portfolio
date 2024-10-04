@@ -120,4 +120,7 @@ class Status(models.Model):
     experience_year = models.IntegerField()
 
     def __str__(self):
-        return self.happy_client
+        return str(self.happy_client)  # Convert to string
+
+
+
