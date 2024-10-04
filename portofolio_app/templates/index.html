@@ -139,7 +139,7 @@
           <div class="stats-item text-center">
               <div class="d-flex align-items-center justify-content-center">
                 <i class="bi bi-person-check"></i>
-                <span class="counter" data-count="40" style="font-size: 40px; font-weight: 400; margin-left: 10px;">0</span>
+                <span class="counter" data-count="{{status.experience_year}}" style="font-size: 40px; font-weight: 400; margin-left: 10px;">0</span>
               </div>
               <p>Work Experience</p>
           </div>
@@ -227,7 +227,6 @@
         <div class="timeline-content">
           <h3>{{ i.job_title }}</h3>
           <p>{{ i.company_name }} | <i class="fas fa-map-marker-alt"></i>  <span> {{ i.location }} <span></p>
-          <p> {{i.description}}</p>
           <h4><i class="fas fa-calendar-alt"></i> {{ i.start_date|date:"Y" }} - {{ i.end_date|date:"Y" }}</h4>
         </div>
       </div>
