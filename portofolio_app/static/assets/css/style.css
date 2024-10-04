@@ -1301,6 +1301,7 @@ cursor: pointer;
   }
   .stats {
     padding: 30px 0;
+    margin: 15px;
   }
   
   .stats i {
@@ -1764,6 +1765,7 @@ cursor: pointer;
 .sections-wrapper {
   display: flex;
   flex-wrap: wrap; /* Allow sections to wrap if needed */
+  margin: 15px;
 }
 
 @media (min-width: 768px) { /* Adjust breakpoint as needed */
