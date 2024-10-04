@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, GeneralSkill,ProjectImage, Category , SpecificSkill, Service, Project, Education, Certification, Experience, SocialMedia
+from .models import Profile, GeneralSkill,ProjectImage,Status , Category , SpecificSkill, Service, Project, Education, Certification, Experience, SocialMedia
 
 # Register your models with the Django admin site
 admin.site.register(Profile)
@@ -13,5 +13,6 @@ admin.site.register(Experience)
 admin.site.register(SocialMedia)
 admin.site.register(ProjectImage)
 admin.site.register(Category)
+admin.site.register(Status)
 
 
