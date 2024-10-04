@@ -118,3 +118,6 @@ class Status(models.Model):
     project_completed = models.IntegerField()
     certification = models.IntegerField()
     experience_year = models.IntegerField()
+
+    def __str__(self):
+        return self.happy_client
